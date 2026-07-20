@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>McDonald's Menu • USA 2026</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo">McDonald's</div>
+      <a href="http://mcdocoffeemenu.com/" target="_blank" rel="noopener noreferrer" class="coffee-link">☕ McDo Coffee Menu</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>I'm Lovin' It</h1>
+      <p>Real McDonald's USA Menu • 2026</p>
+      <a href="http://mcdocoffeemenu.com/" target="_blank" rel="noopener noreferrer" class="hero-btn">Explore Full McCafé Menu →</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search menu..." onkeyup="filterMenu()">
+      <div class="category-filters" id="categoryFilters"></div>
+    </div>
+    <div id="menuGrid" class="menu-grid"></div>
+  </main>
+
+  <div id="cartDrawer" class="cart-drawer">
+    <div class="cart-header">
+      <h2>Your Cart (<span id="cartCount">0</span>)</h2>
+      <button onclick="toggleCart()" class="close-btn">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="total">Total: $<span id="cartTotal">0.00</span></div>
+      <button onclick="checkout()" class="checkout-btn">Checkout</button>
+    </div>
+  </div>
+
+  <div class="cart-icon" onclick="toggleCart()">🛒 <span id="cartIconCount">0</span></div>
+
+  <footer>
+    <p>© 2026 McDonald's Demo App • Accurate USA Menu Data</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
